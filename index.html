@@ -1,498 +1,291 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-      xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-    <title>Ment</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
-    <!-- Other Meta Tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
-    <meta name="robots" content="noindex,nofollow"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
-        function r(n) {
-            if (!t[n]) {
-                var o = t[n] = {exports: {}};
-                e[n][0].call(o.exports, function (t) {
-                    var o = e[n][1][t];
-                    return r(o || t)
-                }, o, o.exports)
-            }
-            return t[n].exports
-        }
-
-        if ("function" == typeof __nr_require) return __nr_require;
-        for (var o = 0; o < n.length; o++) r(n[o]);
-        return r
-    }({
-        1: [function (e, t, n) {
-            function r() {
-            }
-
-            function o(e, t, n) {
-                return function () {
-                    return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
-                }
-            }
-
-            var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM;
-            "undefined" == typeof window.newrelic && (newrelic = s);
-            var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
-                d = "api-", l = d + "ixn-";
-            a(p, function (e, t) {
-                s[t] = o(d + t, !0, "api")
-            }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
-                return (new r).get()
-            };
-            var m = r.prototype = {
-                createTracer: function (e, t) {
-                    var n = {}, r = this, o = "function" == typeof t;
-                    return i(l + "tracer", [f.now(), e, n], r), function () {
-                        if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
-                            return t.apply(this, arguments)
-                        } catch (e) {
-                            throw c.emit("fn-err", [arguments, this, e], n), e
-                        } finally {
-                            c.emit("fn-end", [f.now()], n)
-                        }
-                    }
-                }
-            };
-            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
-                m[t] = o(l + t)
-            }), newrelic.noticeError = function (e) {
-                "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
-            }
-        }, {}], 2: [function (e, t, n) {
-            function r(e, t) {
-                var n = [], r = "", i = 0;
-                for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
-                return n
-            }
-
-            var o = Object.prototype.hasOwnProperty;
-            t.exports = r
-        }, {}], 3: [function (e, t, n) {
-            function r(e, t, n) {
-                t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
-                for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
-                return i
-            }
-
-            t.exports = r
-        }, {}], 4: [function (e, t, n) {
-            t.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
-        }, {}], ee: [function (e, t, n) {
-            function r() {
-            }
-
-            function o(e) {
-                function t(e) {
-                    return e && e instanceof r ? e : e ? c(e, u, i) : i()
-                }
-
-                function n(n, r, o, i) {
-                    if (!d.aborted || i) {
-                        e && e(n, r, o);
-                        for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
-                        var p = s[y[n]];
-                        return p && p.push([b, n, r, a]), a
-                    }
-                }
-
-                function l(e, t) {
-                    v[e] = m(e).concat(t)
-                }
-
-                function m(e) {
-                    return v[e] || []
-                }
-
-                function w(e) {
-                    return p[e] = p[e] || o(n)
-                }
-
-                function g(e, t) {
-                    f(e, function (e, n) {
-                        t = t || "feature", y[n] = t, t in s || (s[t] = [])
-                    })
-                }
-
-                var v = {}, y = {},
-                    b = {on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1};
-                return b
-            }
-
-            function i() {
-                return new r
-            }
-
-            function a() {
-                (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
-            }
-
-            var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o();
-            d.backlog = s
-        }, {}], gos: [function (e, t, n) {
-            function r(e, t, n) {
-                if (o.call(e, t)) return e[t];
-                var r = n();
-                if (Object.defineProperty && Object.keys) try {
-                    return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
-                } catch (i) {
-                }
-                return e[t] = r, r
-            }
-
-            var o = Object.prototype.hasOwnProperty;
-            t.exports = r
-        }, {}], handle: [function (e, t, n) {
-            function r(e, t, n, r) {
-                o.buffer([e], r), o.emit(e, t, n)
-            }
-
-            var o = e("ee").get("handle");
-            t.exports = r, r.ee = o
-        }, {}], id: [function (e, t, n) {
-            function r(e) {
-                var t = typeof e;
-                return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
-                    return o++
-                })
-            }
-
-            var o = 1, i = "nr@id", a = e("gos");
-            t.exports = r
-        }, {}], loader: [function (e, t, n) {
-            function r() {
-                if (!x++) {
-                    var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0];
-                    if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
-                    f(y, function (t, n) {
-                        e[t] || (e[t] = n)
-                    }), c("mark", ["onload", a() + h.offset], null, "api");
-                    var n = d.createElement("script");
-                    n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
-                }
-            }
-
-            function o() {
-                "complete" === d.readyState && i()
-            }
-
-            function i() {
-                c("mark", ["domContent", a() + h.offset], null, "api")
-            }
-
-            function a() {
-                return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
-            }
-
-            var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document,
-                l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
-            NREUM.o = {
-                ST: setTimeout,
-                SI: p.setImmediate,
-                CT: clearTimeout,
-                XHR: w,
-                REQ: p.Request,
-                EV: p.Event,
-                PR: p.Promise,
-                MO: p.MutationObserver
-            };
-            var v = "" + location, y = {
-                    beacon: "bam.nr-data.net",
-                    errorBeacon: "bam.nr-data.net",
-                    agent: "js-agent.newrelic.com/nr-1071.min.js"
-                }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
-                h = t.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
-            e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
-            var x = 0, E = e(4)
-        }, {}]
-    }, {}, ["loader"]);</script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
-    <style> body, table tr, table td, a, span, table.MsoNormalTable {
-        font-family: Arial, Helvetica, sans-serif !important;
-    }</style>
-    <style media="all">
-        /* CLIENT-SPECIFIC STYLES */
-
-        #outlook a {
-            padding: 0;
-        }
-
-        /* Force Outlook to provide a "view in browser" message */
-
-        .ReadMsgBody {
-            width: 100%;
-        }
-
-        .ExternalClass {
-            width: 100%;
-        }
-
-        /* Force Hotmail to display emails at full width */
-
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-            line-height: 100%;
-        }
-
-        /* Force Hotmail to display normal line spacing */
-        /* iOS BLUE LINKS */
-
-        @-ms-viewport {
-            width: device-width;
-        }
-    </style>
-    <style media="all">
-        html {
-            -webkit-text-size-adjust: none;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        p,
-        .undoreset div p,
-        .undoreset p {
-            margin-top: 18px;
-            margin-bottom: 18px;
-        }
-
-        a[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important;
-        }
-
-        .center_align {
-            text-align: center !important;
-            margin: 0 auto;
-        }
-
-        .textColor {
-            color: #333333 !important;
-            outline: none !important;
-            text-decoration: none !important;
-        }
-
-        a {
-            outline: none !important;
-            text-decoration: none !important;
-        }
-
-        .phone-bg {
-            background-size: cover !important;
-        }
-
-        @media only screen and (max-width: 640px) {
-            .main {
-                width: 100% !important;
-                min-width: 100% !important;
-            }
-
-            .inner_table {
-                width: 90% !important;
-            }
-
-            .res {
-                width: 100% !important;
-                display: block !important;
-            }
-
-            .left_align {
-                text-align: left !important;
-            }
-
-            .center_align {
-                text-align: center !important;
-                margin: 0 auto;
-            }
-
-            .full-width {
-                width: 100% !important;
-                height: auto !important;
-            }
-
-            .phne_height {
-                height: 25px !important;
-            }
-
-            .hidden {
-                display: none !important;
-            }
-
-            .padding_top {
-                padding-top: 18px !important;
-            }
-
-            .padding-btm {
-                padding-bottom: 18px !important;
-            }
-
-            .iphoneHeight {
-                height: 20px !important;
-            }
-
-            .iphoneHeight1 {
-                height: 15px !important;
-            }
-
-            .iphoneHeight0 {
-                height: 0px !important;
-            }
-
-            .iphoneSpace {
-                height: 25px !important;
-            }
-
-            .iphoneSpace2 {
-                height: 22px !important;
-            }
-
-            .noSpace {
-                height: 0px !important;
-            }
-
-            .padLeft {
-                padding-left: 15px !important;
-            }
-
-            .floatNone {
-                float: left !important;
-            }
-
-            .tableWidth {
-                float: none !important;
-                width: 148px !important;
-                margin: 0 auto !important;
-            }
-
-            .tableWidth1 {
-                width: 120px !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-            }
-        }
-
-        @media only screen and (max-width: 640px) {
-            *[class].main {
-                width: 100% !important;
-                min-width: 100% !important;
-            }
-
-            *[class].inner_table {
-                width: 90% !important;
-            }
-
-            *[class].res {
-                width: 100% !important;
-                display: block !important;
-            }
-
-            *[class].left_align {
-                text-align: left !important;
-            }
-
-            *[class].center_align {
-                text-align: center !important;
-                margin: 0 auto;
-            }
-
-            *[class].full-width {
-                width: 100% !important;
-                height: auto !important;
-            }
-
-            *[class].phne_height {
-                height: 25px !important;
-            }
-
-            *[class].hidden {
-                display: none !important;
-            }
-
-            *[class].padding_top {
-                padding-top: 18px !important;
-            }
-
-            *[class].padding-btm {
-                padding-bottom: 18px !important;
-            }
-
-            *[class].iphoneHeight {
-                height: 20px !important;
-            }
-
-            *[class].iphoneHeight1 {
-                height: 15px !important;
-            }
-
-            *[class].iphoneHeight0 {
-                height: 0px !important;
-            }
-
-            *[class].iphoneSpace {
-                height: 25px !important;
-            }
-
-            *[class].iphoneSpace2 {
-                height: 22px !important;
-            }
-
-            *[class].noSpace {
-                height: 0px !important;
-            }
-
-            *[class].padLeft {
-                padding-left: 15px !important;
-            }
-
-            *[class].floatNone {
-                float: left !important;
-            }
-
-            *[class].tableWidth {
-                float: none !important;
-                width: 148px !important;
-                margin: 0 auto !important;
-            }
-
-            *[class].tableWidth1 {
-                width: 120px !important;
-                margin: 0 auto !important;
-                text-align: center !important;
-            }
-        }
-    </style>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="">
+<title>Ment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("cover-image.jpg");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 24px;
+    }
+</style>
 <body>
-<div class="center_align" id="body_sec1_image" mktolockimgsize="true">
-    <img src="mentWebLogo.png"
-         width="600" alt="Ment"  class="full-width" style=""/></a>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home"><img src="mentWebLogo.png"
+                             width="100" alt="Ment" class="full-width" style="margin: 10px 10px"/></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+            <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+            <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+            <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+           onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 </div>
-<h1 style="text-align: center">
-    Contact
-</h1>
-<h2 style="text-align: center">
-    Trevor Suarez
-</h2>
-<h3 style="text-align: center">
-    (262) 200-2188
-</h3>
-<h3 style="text-align: center">
-    trevor@mentsolutions.com
-</h3>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
+     id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">How tech was ment to be</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">How tech was ment to be</span><br>
+        <span class="w3-large">Stop working for your tech and let it work for you.</span>
+        <p><a href="#about"
+              class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
+            more</a></p>
+    </div>
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+        <a href="https://facebook.com/ment3d"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://instagram.com/ment_tech"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/trevorsuarez/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    </div>
+</header>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">ABOUT THE COMPANY</h3>
+    <p class="w3-center w3-large">Key Values</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+            <p class="w3-large">Technology</p>
+            <p>Ment's solutions are modern and built for today's standards, ensuring each solution is future proof.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Passion</p>
+            <p>Ment was founded on a passion for technology and making others happy. The tradition is still continued
+                with every client.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Design</p>
+            <p>Ment's custom solutions fit your need, ensuring you are happy with the results.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Support</p>
+            <p>The Ment team is always reaady at your service. Service times are fast and convenient, to work with your
+                schedule.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-padding-64" style="background: #00486a; color: white;">
+    <div class="w3-third">
+        <span class="w3-xxlarge">30+</span>
+        <br>Projects Done
+    </div>
+    <div class="w3-third">
+        <span class="w3-xxlarge">15+</span>
+        <br>Happy Clients
+    </div>
+    <div class="w3-third">
+        <span class="w3-xxlarge">1</span>
+        <br>Person Behind the Brand
+    </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px;" id="work">
+    <h3 class="w3-center">OUR WORK</h3>
+    <p class="w3-center w3-large">What Ment has done for people</p>
+
+    <div class="w3-row-padding" style="margin-top:64px">
+        <div class="w3-col l3 m6">
+            <img src="ubiquiti.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Ubiquiti UniFi">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="orbi.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Netgear Orbi">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="router.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Troubleshooting Routers">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="mavic-pro.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Drone Photography">
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-section">
+        <div class="w3-col l3 m6">
+            <img src="windows.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Windows">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="macos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Mac OS">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="ios.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="iOS">
+        </div>
+        <div class="w3-col l3 m6">
+            <img src="android.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                 alt="Android">
+        </div>
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center" style="padding:128px 16px; background: #00486a; color: white;" id="pricing">
+    <h3>PRICING</h3>
+    <p class="w3-large" style="">To determine pricing for your project, get in contact with us to schedule a
+        consultation. After the consultation, pricing will be determined.</p>
+    <div class="w3-third">
+        <p></p>
+    </div>
+    <div class="w3-third">
+        <p><a href="#contact" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> CONTACT</a></p>
+    </div>
+    <div class="w3-third">
+        <p></p>
+    </div>
+</div>
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px;text-align: center" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <div class="w3-row-padding" style="margin-top:64px; text-align: center">
+        <div class="w3-third">
+            <p></p>
+        </div>
+        <div class="w3-third">
+            <div class="w3-card">
+                <img src="Trevor.jpg" alt="Trevor" style="width:100%">
+                <div class="w3-container">
+                    <h3>Trevor Suarez</h3>
+                    <p class="w3-opacity">CEO & Founder</p>
+                    <p>An interesting fact about Trevor is that he is a coxswain on the MSOE Rowing Team.
+                        One of his favorite places to travel is to Walt Disney World, as he has a
+                        huge passion for Disney and their parks! In his free time he enjoys flying drones. Lastly,
+                        one of his favorite fast food places is Culver’s.</p>
+                    <p><a href="#contact" class="w3-button w3-block" style="background-color: #00486A; color: white;"><i
+                            class="fa fa-envelope"></i>
+                        CONTACT</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-third">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">CONTACT</h3>
+    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <div class=w3-center style="margin-top:48px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge"></i> Dousman, WI</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (262) 200-2188</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contact@mentsolutions.com</p>
+        <p><br></p>
+        <div class="w3-center">
+            <p><a class=w3-button style="color: white; background-color: #46983c"
+                  href="mailto:contact@mentsolutions.com?subject=Contact Us"><i class="fa fa-envelope"></i> Contact
+                Us</a></p>
+        </div>
+
+        <!--        &lt;!&ndash; Image of location/map &ndash;&gt;-->
+        <!--        <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">-->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64" style="background: #00486a; color: white;">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+        <a href="https://facebook.com/ment3d"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://instagram.com/ment_tech"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/trevorsuarez/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <p>&copy 2019 Ment Solutions</p>
+    </div>
+</footer>
+
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+</script>
+
 </body>
 </html>
