@@ -34,14 +34,14 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <img src="mentWebLogo.png"
+        <a href="#home"><img src="mentWebLogo.png"
              width="100" alt="Ment" class="full-width" style="margin: 10px 10px"/></a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
             <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-            <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
             <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
             <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+            <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
             <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -58,8 +58,8 @@
      id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
     <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
     <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -173,7 +173,7 @@
 </div>
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center" style="padding:128px 16px; background: #00486a; color: white;">
+<div class="w3-container w3-center" style="padding:128px 16px; background: #00486a; color: white;" id="pricing">
     <h3>PRICING</h3>
     <p class="w3-large" style="">To determine pricing for your project, get in contact with us to schedule a
         consultation. After the consultation, pricing will be determined.</p>
