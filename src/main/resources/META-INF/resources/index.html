@@ -1,0 +1,305 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="">
+<title>Ment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("cover-image.jpg");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 24px;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home"><img src="mentWebLogo.png" width="100" alt="Ment" class="full-width"
+                    style="margin: 10px 10px" /></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+                <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+            <span class="w3-jumbo w3-hide-small">How tech was ment to be</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">How tech was ment to be</span><br>
+            <span class="w3-large">Stop working for your tech and let it work for you.</span>
+            <p><a href="#about"
+                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
+                    more</a></p>
+        </div>
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <a href="https://facebook.com/ment3d"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://instagram.com/ment_tech"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+            <a href="https://www.linkedin.com/in/trevorsuarez/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding:128px 16px" id="about">
+        <h3 class="w3-center">ABOUT THE COMPANY</h3>
+        <p class="w3-center w3-large">Key Values</p>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">Technology</p>
+                <p>Ment's solutions are modern and built for today's standards, ensuring each solution is future proof.
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Passion</p>
+                <p>Ment was founded on a passion for technology and making others happy. The tradition is still
+                    continued
+                    with every client.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Design</p>
+                <p>Ment's custom solutions fit your need, ensuring you are happy with the results.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Support</p>
+                <p>The Ment team is always reaady at your service. Service times are fast and convenient, to work with
+                    your
+                    schedule.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="w3-container w3-row w3-center w3-padding-64" style="background: #00486a; color: white;">
+        <div class="w3-third">
+            <span class="w3-xxlarge">30+</span>
+            <br>Projects Done
+        </div>
+        <div class="w3-third">
+            <span class="w3-xxlarge">15+</span>
+            <br>Happy Clients
+        </div>
+        <div class="w3-third">
+            <span class="w3-xxlarge">1</span>
+            <br>Person Behind the Brand
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div class="w3-container" style="padding:128px 16px;" id="work">
+        <h3 class="w3-center">OUR WORK</h3>
+        <p class="w3-center w3-large">What Ment has done for people</p>
+
+        <div class="w3-row-padding" style="margin-top:64px">
+            <div class="w3-col l3 m6">
+                <img src="ubiquiti.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Ubiquiti UniFi">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="orbi.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Netgear Orbi">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="router.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Troubleshooting Routers">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="mavic-pro.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Drone Photography">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col l3 m6">
+                <img src="windows.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Windows">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="macos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mac OS">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="ios.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="iOS">
+            </div>
+            <div class="w3-col l3 m6">
+                <img src="android.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Android">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="w3-container w3-center" style="padding:128px 16px; background: #00486a; color: white;" id="pricing">
+        <h3>PRICING</h3>
+        <p class="w3-large">To determine pricing for your project, get in contact with us to schedule a
+            consultation. After the consultation, pricing will be determined.</p>
+        <div class="w3-third">
+            <p></p>
+        </div>
+        <div class="w3-third">
+            <p><a href="#contact" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> CONTACT</a>
+            </p>
+        </div>
+        <div class="w3-third">
+            <p></p>
+        </div>
+    </div>
+
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:128px 16px;text-align: center" id="team">
+        <h3 class="w3-center">THE TEAM</h3>
+        <div class="w3-row-padding" style="margin-top:64px; text-align: center">
+            <div class="w3-third">
+                <p></p>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="Trevor.jpg" alt="Trevor" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Trevor Suarez</h3>
+                        <p class="w3-opacity">CEO & Founder</p>
+                        <p>An interesting fact about Trevor is that he is a coxswain on the MSOE Rowing Team.
+                            One of his favorite places to travel is to Walt Disney World, as he has a
+                            huge passion for Disney and their parks! In his free time he enjoys flying drones. Lastly,
+                            one of his favorite fast food places is Culver’s.</p>
+                        <p><a href="#contact" class="w3-button w3-block"
+                                style="background-color: #00486A; color: white;"><i class="fa fa-envelope"></i>
+                                CONTACT</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright"
+            title="Close Modal Image">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="w3-container" style="padding:128px 16px" id="contact">
+        <h3 class="w3-center">CONTACT</h3>
+        <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+        <div class=w3-center style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge"></i> Dousman, WI</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (262) 200-2188</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contact@mentsolutions.com</p>
+            <p><br></p>
+            <div class="w3-center">
+                <p><a class=w3-button style="color: white; background-color: #46983c"
+                        href="mailto:contact@mentsolutions.com?subject=Contact Us"><i class="fa fa-envelope"></i>
+                        Contact
+                        Us</a></p>
+            </div>
+
+            <!--        &lt;!&ndash; Image of location/map &ndash;&gt;-->
+            <!--        <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">-->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-padding-64" style="background: #00486a; color: white;">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <a href="https://facebook.com/ment3d"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://instagram.com/ment_tech"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+            <a href="https://www.linkedin.com/in/trevorsuarez/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            <p>&copy 2019 Ment Solutions</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
